@@ -1,16 +1,19 @@
 <template>
 	<div id="app">
 		<TitlePage />
+		<Stream />
 	</div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import TitlePage from "./components/TitlePage.vue";
+import Stream from "./components/Stream.vue";
 
 @Component({
 	components: {
-		TitlePage
+		TitlePage,
+		Stream
 	}
 })
 export default class App extends Vue {}
