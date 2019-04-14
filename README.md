@@ -1,29 +1,33 @@
 # who-you-are
 
-## Project setup
+A digital story for people of all ages about confuting your digital self with your real self. Bootstrapped with Vue CLI.
+
+## Setup and helpful scripts
+
+-   install
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+-   Compiles and hot-reloads for development
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+-   Compiles and minifies for production
+
 ```
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
+-   Lints and fixes files
 
-### Lints and fixes files
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Other cools things
+
+-   Uses SCSS and Typscript
