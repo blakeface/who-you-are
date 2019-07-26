@@ -1,6 +1,5 @@
 <template>
   <section>
-    <div class="graphic"></div>
     <div class="text">
       <p>
         You are not the
