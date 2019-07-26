@@ -1,29 +1,31 @@
 # who-you-are
 
-## Project setup
+A digital story for people of all ages about confuting your digital self with your real self. Bootstrapped with Vue CLI.
+
+## Setup and helpful scripts
+
+- install
+
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+- Compiles and hot-reloads for development
+
 ```
-yarn run serve
+yarn run
 ```
 
-### Compiles and minifies for production
+- Compiles and minifies for production
+
 ```
 yarn run build
 ```
 
-### Run your tests
-```
-yarn run test
-```
+- Lints and fixes files
 
-### Lints and fixes files
 ```
 yarn run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Other cools things
