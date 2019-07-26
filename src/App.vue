@@ -1,27 +1,32 @@
 <template>
   <main id="app">
+    <TitlePage />
     <Stream />
   </main>
 </template>
 
 <script>
+import TitlePage from "./components/TitlePage.vue";
 import Stream from "./components/Stream.vue";
 
 export default {
   name: "app",
   components: {
+    TitlePage,
     Stream
   }
 };
 </script>
 
 <style>
-#app {
+body {
+  margin: 0;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+section {
+  min-height: 100vh;
 }
 </style>
