@@ -1,39 +1,28 @@
 <template>
-	<div id="app">
-		<TitlePage />
-		<Stream />
-	</div>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import TitlePage from "./components/TitlePage.vue";
-import Stream from "./components/Stream.vue";
+<script>
+import HelloWorld from './components/HelloWorld.vue'
 
-@Component({
-	components: {
-		TitlePage,
-		Stream
-	}
-})
-export default class App extends Vue {}
+export default {
+  name: 'app',
+  components: {
+    HelloWorld
+  }
+}
 </script>
 
-<style lang="scss">
-// global styles :)
-body {
-	margin: 0;
-	padding: 0;
-}
-
+<style>
 #app {
-	font-family: "Avenir", Helvetica, Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: #2c3e50;
-}
-
-section {
-	min-height: 100vh;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>

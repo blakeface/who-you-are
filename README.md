@@ -1,33 +1,29 @@
 # who-you-are
 
-A digital story for people of all ages about confuting your digital self with your real self. Bootstrapped with Vue CLI.
-
-## Setup and helpful scripts
-
--   install
-
+## Project setup
 ```
-npm install
+yarn install
 ```
 
--   Compiles and hot-reloads for development
-
+### Compiles and hot-reloads for development
 ```
-npm start
-```
-
--   Compiles and minifies for production
-
-```
-npm run build
+yarn run serve
 ```
 
--   Lints and fixes files
-
+### Compiles and minifies for production
 ```
-npm run lint
+yarn run build
 ```
 
-## Other cools things
+### Run your tests
+```
+yarn run test
+```
 
--   Uses SCSS and Typscript
+### Lints and fixes files
+```
+yarn run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
