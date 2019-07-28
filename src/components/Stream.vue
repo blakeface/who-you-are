@@ -1,6 +1,12 @@
 <template>
   <section>
-    <div class="text">
+    <div class="buffer section" />
+
+    <div class="pool-wrapper section">
+      <img src="../assets/pool_bottom.jpg" alt="water refracted on a pool's bottom" />
+    </div>
+
+    <div class="text section">
       <p>
         You are not the
         <span>driftwood</span>,
@@ -38,6 +44,49 @@ export default {
 
 <style scoped>
 section {
-  padding: 3rem;
+  position: relative;
+  background-color: #d4814a;
 }
+
+.section {
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.buffer {
+  background-color: #e6e5a3;
+  height: 30vh;
+  top: 0;
+}
+
+.text {
+  width: calc(100% - 6em);
+  padding: 3em;
+  top: 30vh;
+  z-index: 5;
+}
+p {
+  background-color: black;
+  color: #e6e5a3;
+}
+
+.pool-wrapper {
+  top: 30vh;
+  max-height: 70vh;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  background-color: #99985d;
+}
+img {
+  height: auto;
+  width: 100vw;
+  max-width: 800px;
+  clip-path: polygon(35% 0%, 65% 0%, 80% 100%, 20% 100%);
+}
+
+/* FFAB73
+D4814A
+82D9C6 */
 </style>

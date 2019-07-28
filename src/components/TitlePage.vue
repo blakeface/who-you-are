@@ -61,6 +61,7 @@ section {
   text-align: right;
   background-color: #e0b5b5;
   color: #000;
+  min-height: 95vh;
 }
 div {
   padding: 3rem;

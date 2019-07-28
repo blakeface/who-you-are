@@ -13,7 +13,7 @@ yarn install
 - Compiles and hot-reloads for development
 
 ```
-yarn run
+yarn serve
 ```
 
 - Compiles and minifies for production
@@ -27,5 +27,3 @@ yarn run build
 ```
 yarn run lint
 ```
-
-## Other cools things
