@@ -62,13 +62,14 @@ section {
 
 .text {
   width: calc(100% - 6em);
-  padding: 3em;
-  top: 30vh;
+  padding: 0 3em;
+  top: calc(30vh - 4em);
   z-index: 5;
 }
 p {
   background-color: black;
   color: #e6e5a3;
+  margin: 1em;
 }
 
 .pool-wrapper {
@@ -86,7 +87,7 @@ img {
   clip-path: polygon(35% 0%, 65% 0%, 80% 100%, 20% 100%);
 }
 
-/* FFAB73
-D4814A
-82D9C6 */
+span {
+  color: #b36d6e;
+}
 </style>
