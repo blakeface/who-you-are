@@ -1,13 +1,20 @@
 <template>
   <section>
-    <div class="buffer section" />
+    <div class="buffer" />
 
-    <div class="pool-wrapper section">
+    <div class="pool-wrapper">
       <img src="../assets/pool_bottom.jpg" alt="water refracted on a pool's bottom" />
     </div>
 
     <div class="text section">
-      <p>
+      <h2>The stream.</h2>
+      <p>It doesn't braid. It doesn't rill. It doesn't meander. It doesn't thrill.</p>
+      <p>It's laminar flow: unaffected from fish and flamingos.</p>
+      <p>No ripples in sight to provide a stage for dancing light</p>
+      <p>Yet without such physical constraints, it's free to pontificate... how to make a splash without the help of</p>
+
+      <!-- first draft -->
+      <!-- <p>
         You are not the
         <span>driftwood</span>,
         <span>rapids</span>, or
@@ -30,7 +37,7 @@
         <span>up</span>,
         <span>up</span>, and
         <span>forward</span>. You steer your own course.
-      </p>
+      </p>-->
     </div>
   </section>
 </template>
@@ -45,7 +52,6 @@ export default {
 <style scoped>
 section {
   position: relative;
-  background-color: #d4814a;
 }
 
 .section {
@@ -70,9 +76,17 @@ p {
   background-color: black;
   color: #e6e5a3;
   margin: 1em;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-
+.right {
+  text-align: right;
+}
+.pad-right {
+  padding-right: 10%;
+}
 .pool-wrapper {
+  width: 100%;
   top: 30vh;
   max-height: 70vh;
   overflow: hidden;
@@ -88,6 +102,6 @@ img {
 }
 
 span {
-  color: #b36d6e;
+  color: #c23133;
 }
 </style>

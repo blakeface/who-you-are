@@ -33,12 +33,12 @@ export default {
     const height = size.height / 2;
 
     const points = parseInt(bounds.width / 50);
-    const path = new Path();
+    const path = new this.paper.Path();
     path.fillColor = "black";
 
     // add segments
     for (let i = 0; i <= points; i++) {
-      const point = new Point((width / points) * i, center.y);
+      const point = new this.paper.Point((width / points) * i, center.y);
       path.add(point);
     }
 
