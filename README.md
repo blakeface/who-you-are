@@ -4,30 +4,26 @@ A digital story for people of all ages about confuting your digital self with yo
 
 ## Setup and helpful scripts
 
--   install
+- install
 
 ```
-npm install
+yarn install
 ```
 
--   Compiles and hot-reloads for development
+- Compiles and hot-reloads for development
 
 ```
-npm start
+yarn serve
 ```
 
--   Compiles and minifies for production
+- Compiles and minifies for production
 
 ```
-npm run build
+yarn run build
 ```
 
--   Lints and fixes files
+- Lints and fixes files
 
 ```
-npm run lint
+yarn run lint
 ```
-
-## Other cools things
-
--   Uses SCSS and Typscript

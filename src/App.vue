@@ -1,39 +1,28 @@
 <template>
-	<div id="app">
-		<TitlePage />
-		<Stream />
-	</div>
+  <main id="app">
+    <TitlePage />
+    <Part1 />
+  </main>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import TitlePage from "./components/TitlePage.vue";
-import Stream from "./components/Stream.vue";
+<script>
+import TitlePage from "./components/TitlePage";
+import Part1 from "./components/Part1";
 
-@Component({
-	components: {
-		TitlePage,
-		Stream
-	}
-})
-export default class App extends Vue {}
+export default {
+  name: "app",
+  components: {
+    TitlePage,
+    Part1
+  }
+};
 </script>
 
-<style lang="scss">
-// global styles :)
+<style>
 body {
-	margin: 0;
-	padding: 0;
-}
-
-#app {
-	font-family: "Avenir", Helvetica, Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: #2c3e50;
-}
-
-section {
-	min-height: 100vh;
+  margin: 0;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 </style>
