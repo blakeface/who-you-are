@@ -2,10 +2,10 @@
   <section>
     <div>
       <h1>Who You Are</h1>
-      <h3>An all-age's story about people and the modern digital world</h3>
+      <h3>A story about people as shapes and colors in the modern digital world</h3>
       <p>By Blake Netzeband</p>
     </div>
-    <canvas id="paper-canvas" resize="true"></canvas>
+    <canvas id="title-canvas" resize="true"></canvas>
   </section>
 </template>
 
@@ -20,13 +20,8 @@ export default {
     };
   },
 
-  created() {
-    // unfortunately need to attach paper to global scope
-    paper.install(window);
-  },
-
   mounted() {
-    this.paper = paper.setup("paper-canvas");
+    this.paper = paper.setup("title-canvas");
 
     const { center, size, bounds } = this.paper.view;
     const { width } = size;

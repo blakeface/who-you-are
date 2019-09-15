@@ -1,22 +1,19 @@
 <template>
   <main id="app">
     <TitlePage />
-    <Stream />
-    <Foo />
+    <Part1 />
   </main>
 </template>
 
 <script>
 import TitlePage from "./components/TitlePage";
-import Stream from "./components/Stream";
-import Foo from "./components/Foo";
+import Part1 from "./components/Part1";
 
 export default {
   name: "app",
   components: {
     TitlePage,
-    Stream,
-    Foo
+    Part1
   }
 };
 </script>
