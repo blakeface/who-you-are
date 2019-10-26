@@ -1,26 +1,43 @@
 <template>
   <section class="part-1">
     <p>If you rolled-up all the likes, interests, thoughts, and loves of any given person</p>
-    <div class="shapes-wrapper">
+    <section class="shapes-wrapper">
       <p>
-        <span class="shape" data-shape="circle">you'd most likely get something like this</span>
+        <span
+          class="shape"
+          data-shape="circle"
+          ref="shape-circle"
+        >you'd most likely get something like this</span>
       </p>
       <p>
-        <span class="shape" data-shape="triangle">Or this</span>
+        <span class="shape" data-shape="triangle" ref="shape-triangle">Or this</span>
       </p>
       <p>
-        <span class="shape" data-shape="square">Or this</span>
+        <span class="shape" data-shape="square" ref="shape-square">Or this</span>
       </p>
       <p>
-        <span class="shape" data-shape="hexagon">Or this</span>
+        <span class="shape" data-shape="hexagon" ref="shape-hexagon">Or this</span>
       </p>
-    </div>
+    </section>
+
+    <section>
+      <p>
+        <span
+          class="shape"
+          data-shape="final"
+          ref="shape-final"
+        >But realistically, you'd end up with something like this</span>
+      </p>
+    </section>
+
+    <p class="help">(Have fun. Click Around.)</p>
     <canvas id="part1-canvas" resize="true" ref="part1-canvas"></canvas>
   </section>
 </template>
 
 <script >
 import paper from "paper";
+import { filter } from "lodash";
 
 export default {
   name: "Part1",
@@ -41,16 +58,21 @@ export default {
 
     randomizeParagraphAlignment: function() {
       const paragraphs = document.querySelectorAll("p");
-      [...paragraphs].forEach(el => {
-        const random = Math.random() * 3;
-        const align = random < 1 ? "left" : random > 2 ? "right" : "center";
-        return el.setAttribute("style", `text-align:${align};`);
+      [...paragraphs].forEach((el, i, arr) => {
+        if (i !== arr.length - 1) {
+          const random = Math.random() * 3;
+          const align = random < 1 ? "left" : random > 2 ? "right" : "center";
+          return el.setAttribute("style", `text-align:${align};`);
+        }
       });
     },
 
     drawShapes: function() {
-      const elements = document.querySelectorAll(".shape");
-      [...elements].forEach((el, i) => {
+      const elements = filter(this.$refs, (el, key) => {
+        return key.includes("shape-") ? true : false;
+      });
+
+      elements.forEach((el, i) => {
         // draw shape
         const { right: x, top: y } = el.getBoundingClientRect();
         const type = el.dataset.shape;
@@ -68,7 +90,6 @@ export default {
 
       const center = new this.paper.Point(x, y);
       const fillColor = `#${this.getRandomHex()}`;
-      let sides = 0;
 
       if (type === "circle") {
         return new this.paper.Path.Circle({
@@ -78,6 +99,7 @@ export default {
         });
       }
 
+      let sides = 0;
       switch (type) {
         case "hexagon":
           sides = 6;
@@ -116,8 +138,10 @@ export default {
     this.randomizeParagraphAlignment();
 
     // add click events
-    const section = document.querySelector(".part-1");
-    section.addEventListener("click", this.handleSectionClick);
+    this.$refs["part1-canvas"].addEventListener(
+      "click",
+      this.handleSectionClick
+    );
 
     // draw first shapes
     this.drawShapes();
@@ -126,13 +150,19 @@ export default {
 </script>
 
 <style scoped>
-section {
+.part-1 {
   position: relative;
+  /* helps calculate positions */
   min-height: 100vh;
-  background-color: #b6e0c2;
+  background: rgb(182, 224, 194);
+  background: linear-gradient(
+    320deg,
+    rgba(205, 204, 226, 1) 0%,
+    rgba(182, 224, 194, 1) 100%
+  );
   padding: 1rem;
 }
-section:hover {
+.part-1:hover {
   cursor: pointer;
 }
 
@@ -145,12 +175,19 @@ canvas {
 }
 
 p {
-  font-size: 20px;
+  font-size: 1rem;
   padding: 50px 0;
   margin: 0;
 }
 
 .shapes-wrapper {
   max-width: calc(100% - 150px);
+}
+
+.help {
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
 }
 </style>
