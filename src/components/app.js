@@ -1,9 +1,9 @@
-import Titlepage from "./titlepage";
+import TitlePage from "./titlepage";
 
 export default function App() {
   return (
     <main id="app">
-      <Titlepage />
+      <TitlePage />
     </main>
   );
 }
