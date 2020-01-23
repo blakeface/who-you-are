@@ -1,12 +1,12 @@
 import anime from "animejs";
 
 import TitleSvg from "./titleSvg";
-import "../style/titlepage";
 
 export default function TitlePage() {
   return (
     <section id="title-page">
-      <div>
+      <div class="svg-wrapper">
+        <TitleSvg />
         <TitleSvg />
         <TitleSvg />
         <TitleSvg />
