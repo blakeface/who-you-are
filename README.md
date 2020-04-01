@@ -1,29 +1,22 @@
 # who-you-are
 
-A digital story for people of all ages about confuting your digital self with your real self. Bootstrapped with Vue CLI.
+## CLI Commands
 
-## Setup and helpful scripts
+``` bash
+# install dependencies
+npm install
 
-- install
+# serve with hot reload at localhost:8080
+npm run dev
 
-```
-yarn install
-```
+# build for production with minification
+npm run build
 
-- Compiles and hot-reloads for development
+# test the production build locally
+npm run serve
 
-```
-yarn serve
-```
-
-- Compiles and minifies for production
-
-```
-yarn run build
+# run tests with jest and preact-render-spy 
+npm run test
 ```
 
-- Lints and fixes files
-
-```
-yarn run lint
-```
+For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).

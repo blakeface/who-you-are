@@ -1,48 +1,49 @@
 {
-  "name": "who-you-are",
-  "version": "0.1.0",
   "private": true,
+  "name": "who-you-are",
+  "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
-    "start": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "core-js": "^3.3.4",
-    "lodash": "^4.17.15",
-    "paper": "^0.12.3",
-    "vue": "^2.6.10"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.9.0",
-    "@vue/cli-plugin-eslint": "^3.9.0",
-    "@vue/cli-service": "^3.9.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "start": "per-env",
+    "start:production": "npm run -s serve",
+    "start:development": "npm run -s dev",
+    "build": "preact build",
+    "serve": "preact build && serve build --single",
+    "dev": "preact watch",
+    "lint": "eslint src",
+    "test": "jest"
   },
   "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
+    "extends": "eslint-config-synacor"
   },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
+  "eslintIgnore": [
+    "build/*"
+  ],
+  "devDependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-preact-pure": "^2.0.0",
+    "eslint": "^6.0.1",
+    "eslint-config-synacor": "^3.0.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "jest-preset-preact": "^1.0.0",
+    "node-sass": "^4.13.1",
+    "per-env": "^1.0.2",
+    "preact-cli": "^3.0.0-rc.6",
+    "preact-render-spy": "^1.2.1",
+    "sass-loader": "^7.3.1",
+    "serve": "^11.1.0"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+  "dependencies": {
+    "animejs": "^3.1.0",
+    "preact": "^10.0.1",
+    "preact-render-to-string": "^5.1.0"
+  },
+  "jest": {
+    "preset": "jest-preset-preact",
+    "setupFiles": [
+      "<rootDir>/tests/__mocks__/browserMocks.js",
+      "<rootDir>/tests/__mocks__/setupTests.js"
+    ]
+  }
 }
